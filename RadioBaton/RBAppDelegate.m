@@ -7,12 +7,18 @@
 //
 
 #import "RBAppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation RBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSError *err = nil;
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setPreferredHardwareSampleRate:44100.0f error:&err];
+    [session setCategory:AVAudioSessionCategoryPlayback error:&err];
+    [session setActive:YES error:&err];
+
     return YES;
 }
 							

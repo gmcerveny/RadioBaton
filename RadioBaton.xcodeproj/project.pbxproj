@@ -18,6 +18,7 @@
 		36B5ED1215FDACF500AFD1ED /* RBComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B5ED1115FDACF500AFD1ED /* RBComposer.m */; };
 		36B5ED1515FDB48B00AFD1ED /* moonlight1.mid in Resources */ = {isa = PBXBuildFile; fileRef = 36B5ED1415FDB48B00AFD1ED /* moonlight1.mid */; };
 		36B5ED1B15FDD55400AFD1ED /* 8mbGeneralMIDI.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = 36B5ED1A15FDD53100AFD1ED /* 8mbGeneralMIDI.SF2 */; };
+		36DBFCC9160E4A6B00598485 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DBFCC8160E4A6B00598485 /* AVFoundation.framework */; };
 		36DF28C315FE243800A68248 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DF28C215FE243800A68248 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		36B5ED1115FDACF500AFD1ED /* RBComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBComposer.m; sourceTree = "<group>"; };
 		36B5ED1415FDB48B00AFD1ED /* moonlight1.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = moonlight1.mid; sourceTree = "<group>"; };
 		36B5ED1A15FDD53100AFD1ED /* 8mbGeneralMIDI.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8mbGeneralMIDI.SF2; sourceTree = "<group>"; };
+		36DBFCC8160E4A6B00598485 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		36DF28C215FE243800A68248 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DBFCC9160E4A6B00598485 /* AVFoundation.framework in Frameworks */,
 				36DF28C315FE243800A68248 /* AudioToolbox.framework in Frameworks */,
 				36B5ECE415FA1BD000AFD1ED /* UIKit.framework in Frameworks */,
 				36B5ECE615FA1BD000AFD1ED /* Foundation.framework in Frameworks */,
@@ -60,6 +63,7 @@
 		36B5ECD415FA1BD000AFD1ED = {
 			isa = PBXGroup;
 			children = (
+				36DBFCC8160E4A6B00598485 /* AVFoundation.framework */,
 				36DF28C215FE243800A68248 /* AudioToolbox.framework */,
 				36B5ECE915FA1BD000AFD1ED /* RadioBaton */,
 				36B5ECE215FA1BD000AFD1ED /* Frameworks */,
@@ -272,10 +276,12 @@
 		36B5ECFE15FA1BD000AFD1ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Greg Cerveny (8XDTYD3E9Y)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RadioBaton/RadioBaton-Prefix.pch";
 				INFOPLIST_FILE = "RadioBaton/RadioBaton-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=*]" = "BE770F7E-CCB0-46FF-B232-F2AB8A3B4930";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
